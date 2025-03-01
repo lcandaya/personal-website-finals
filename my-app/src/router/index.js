@@ -4,12 +4,14 @@ import Welcome from '@/views/Welcome.vue';
 import Education from '@/views/Education.vue';
 import Resources from '@/views/Resources.vue';
 import AboutMe from '@/views/AboutMe.vue';
+import Gallery from '@/views/Gallery.vue';
 
 const routes = [
   { path: '/', component: Welcome },
   { path: '/Education', component: Education },
   { path: '/Resources', component: Resources },
   { path: '/AboutMe', component: AboutMe },
+  { path: '/Gallery', component: Gallery },
 ];
 
 const router = createRouter({

@@ -177,6 +177,7 @@ body::-webkit-scrollbar {
   padding: 10px;
   border-radius: 8px;
   flex-grow: 1;
+
 }
 
 .home-btn {
@@ -240,14 +241,14 @@ body::-webkit-scrollbar {
 }
 
 .display-box {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  padding: 20px;
   background-color: #FFDAF1;
   color: #E37E91;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 700px;
-  text-align: left;
 }
 
 /* Footer Button */
