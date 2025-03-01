@@ -44,7 +44,7 @@ export default {
           <p class='center-text'>I am Lalainne Andaya, but my friends and family call me <i>Lei</i>. I am currently a second-year student
           at Asia Pacific College, taking BSIT with a specialization in Mobile Internet Technologies. I was a graduate 
           of APC-SHS as part of batch 2023, and I took STEM-IT as my SHS track. 
-          <br><br>
+          <br>
           During my stay at APC as a senior high school student, I found myself enjoying what we did which made me decide
           to take the same path for college. And during those years, including the current experience I have, I, along with my 
           teammates, have created a couple of webpages for our projects. We were also able to create a game using Python back in 12th
@@ -134,9 +134,9 @@ body::-webkit-scrollbar {
 }
 
 .main-container {
-  width: 85%;
-  max-width: 800px;
-  max-height: 90vh; /* Prevent it from being too big */
+  width: 100%; 
+  max-width: 1000px; 
+  max-height: 90vh;
   background-color: #FF8DA3;
   border-radius: 20px;
   padding: 20px;
@@ -144,13 +144,13 @@ body::-webkit-scrollbar {
   text-align: center;
   display: flex;
   flex-direction: column;
-  overflow-y: auto; /* Make content scrollable inside */
+  overflow-y: auto;
   position: relative;
-  scrollbar-width: none; /* Hides scrollbar in Firefox */
+  scrollbar-width: none;
 }
 
 .main-container::-webkit-scrollbar {
-  display: none; /* Hides scrollbar in Chrome, Safari, Edge */
+  display: none; 
 }
 
 /* Header */
@@ -249,6 +249,8 @@ body::-webkit-scrollbar {
   color: #E37E91;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem; /* Adjusted base font size */
+  line-height: 1.4;
 }
 
 /* Footer Button */
