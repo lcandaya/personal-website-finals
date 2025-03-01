@@ -41,7 +41,6 @@
 </template>
 
 <script>
-import RibbonBackground from '@/assets/ribbon_background.png';
 export default {
   methods: {
     navigateTo(route) {
@@ -60,16 +59,18 @@ export default {
 }
 
 .background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   background: url('@/assets/ribbon_background.png') no-repeat center center fixed;
   background-size: cover;
+  z-index: -1;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 .main-container {
@@ -78,10 +79,19 @@ export default {
   background-color: #FF8DA3;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-height: 100vh;
-  overflow: auto; /* Allow scrolling inside */
-  position: relative; /* Keep it above the background */
-  z-index: 1; /* Ensure content stays visible */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 85vh;
+  margin: auto;
+  position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.main-container::-webkit-scrollbar {
+  display: none;
 }
 
 .header {
@@ -97,15 +107,14 @@ export default {
 
 .title-container {
   flex: 1;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #E37E91;
-  background-color: #FFDAF1;
   padding: 15px;
-  border-radius: 8px;
+  background-color: #FFDAF1;
   margin-right: 10px;
-  border: none;
+  color: #E37E91;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
 }
 
 .home-btn {
@@ -131,7 +140,7 @@ export default {
 .profile {
   flex: 1;
   text-align: center;
-  min-width: 300px;
+  min-width: 250px;
 }
 
 .profile-pic {
@@ -152,7 +161,7 @@ export default {
   padding: 15px;
   border-radius: 7px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
@@ -161,7 +170,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-width: 300px;
+  min-width: 250px;
 }
 
 .info-box {
@@ -192,68 +201,17 @@ export default {
   color: #FFDAF1;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
-    .background {
-        align-items: flex-start; /* Allow natural content flow */
-    }
-
-  .main-container {
-    padding: 15px;
-    min-height: auto; /* Ensure it grows naturally */
-  }
-
-  .title-container {
-    font-size: 1rem;
-    padding: 8px;
-  }
-
   .profile-pic {
     width: 12rem;
     height: 12rem;
   }
-
-  .profile-info {
-    font-size: 0.9rem;
-    padding: 12px;
-    width: 90%;
-  }
-
-  .info-box {
+  .profile-info, .info-box {
     font-size: 0.9rem;
     padding: 12px;
   }
-
   .footer-btn {
     font-size: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-    .main-container {
-    padding: 10px;
-  }
-
-  .title-container {
-    font-size: 0.9rem;
-  }
-
-  .profile-pic {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  .profile-info {
-    font-size: 0.8rem;
-  }
-
-  .info-box {
-    font-size: 0.8rem;
-    padding: 10px;
-  }
-
-  .footer-btn {
-    font-size: 10px;
   }
 }
 </style>
