@@ -5,6 +5,7 @@ import Education from '@/views/Education.vue';
 import Resources from '@/views/Resources.vue';
 import AboutMe from '@/views/AboutMe.vue';
 import Gallery from '@/views/Gallery.vue';
+import Guestbook from '@/views/Guestbook.vue';
 
 const routes = [
   { path: '/', component: Welcome },
@@ -12,6 +13,7 @@ const routes = [
   { path: '/Resources', component: Resources },
   { path: '/AboutMe', component: AboutMe },
   { path: '/Gallery', component: Gallery },
+  { path: '/Guestbook', component: Guestbook },
 ];
 
 const router = createRouter({
