@@ -16,9 +16,9 @@
 
         <!-- Buttons under gtkm -->
         <div class="gtkm-btns" v-if="isGtkmVisible">
-          <button id="aboutMeBtn" class="btn" @click="navigateTo('/about')">About Me</button>
+          <button id="aboutMeBtn" class="btn" @click="navigateTo('/AboutMe')">About Me</button>
           <button id="galleryBtn" class="btn" @click="navigateTo('/gallery')">Photo Gallery</button>
-          <button id="educationBtn" class="btn" @click="navigateTo('/education')">Education</button>
+          <button id="educationBtn" class="btn" @click="navigateTo('/Education')">Education</button>
         </div>
       </div>
     </div>
